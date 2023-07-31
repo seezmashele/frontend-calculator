@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: "League Spartan", sans-serif;
+  font-weight: 700;
+}
+
+.small_button {
+  box-shadow: 0 4px 0 0 #888;
+}
+
+.del_button,
+.reset_button {
+  box-shadow: 0 4px 0 0 #88f;
+}
+
+.equal_button {
+  box-shadow: 0 4px 0 0 #822;
+}
+
+.front_ellipsis {
+  direction: rtl;
+}
+
+@layer components {
+  .error_border {
+    @apply border-red-500 !important;
+  }
+
+  .box_radius {
+    @apply rounded-lg;
+  }
+
+  .base_text_color {
+    @apply text-white;
+  }
+
+  .small_button,
+  .del_button,
+  .reset_button,
+  .equal_button {
+    @apply box_radius flex items-center justify-center pt-1.5 cursor-pointer;
+  }
+
+  .small_button,
+  .del_button {
+    @apply bg-slate-100;
+  }
+
+  .small_button {
+    @apply text-slate-600;
+  }
+
+  .del_button,
+  .reset_button {
+    @apply text-2xl bg-slate-500;
+  }
+
+  .equal_button {
+    @apply bg-red-500;
+  }
+}
