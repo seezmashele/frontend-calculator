@@ -25,8 +25,12 @@ function App() {
       const charIsNumber = lastCharIsNumber(displayed)
 
       if (charIsNumber) {
-        if (displayedIsResult) setDisplayedIsResult(false)
-        setDisplayed(displayed === "0" ? `${num}` : `${displayed}${num}`)
+        if (displayedIsResult) {
+          setDisplayedIsResult(false)
+          setDisplayed(displayed === "0" ? `0${num}` : `${displayed}${num}`)
+        } else {
+          setDisplayed(displayed === "0" ? `${num}` : `${displayed}${num}`)
+        }
       }
     }
   }
@@ -93,7 +97,7 @@ function App() {
   }
 
   return (
-    <div className="w-full select-none min-h-screen flex bg-slate-700 items-center justify-center base_text_color text-[2rem] p-5">
+    <div className="w-full main_bg theme_1 select-none min-h-screen flex items-center justify-center base_text_color text-[2rem] p-5">
       <div className="flex flex-col w-full max-w-md min-h-[30rem] py-7">
         <div className="flex justify-between items-end">
           <div className="text-2xl flex-grow">calc</div>
@@ -107,7 +111,7 @@ function App() {
             <div className="flex items-center">
               <h2 className=" mr-6 tracking-widest text-[11px]">THEME</h2>
               <div
-                className="bg-slate-900 h-6 w-[5.25rem] p-1 rounded-full cursor-pointer"
+                className="screen_bg h-6 w-[5.25rem] p-1 rounded-full cursor-pointer"
                 onClick={toggleColorScheme}
               >
                 <div
@@ -128,7 +132,7 @@ function App() {
 
         <div
           id="calc-display"
-          className="bg-slate-900 box_radius  mt-5 p-7 border-2 border-transparent transition-colors"
+          className="screen_bg box_radius  mt-5 p-7 border-2 border-transparent transition-colors"
         >
           <div className="justify-end flex overflow-hidden w-full">
             <div className="whitespace-nowrap text-5xl">{displayed}</div>
