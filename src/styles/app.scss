@@ -1,5 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@600;700&display=swap");
-@import "themes";
+@import "themes/theme1.scss";
+@import "themes/theme2.scss";
+@import "themes/theme3.scss";
+@import "themes/theme4.scss";
 
 @tailwind base;
 @tailwind components;
@@ -8,11 +11,6 @@
 :root {
   font-family: "League Spartan", sans-serif;
   font-weight: 700;
-}
-
-.small_button {
-  background-color: $small_button_bg_color_1;
-  box-shadow: 0 4px 0 0 $small_button_shadow_color_1;
 }
 
 @layer components {
@@ -27,21 +25,8 @@
     @apply box_radius flex items-center justify-center pt-1.5 cursor-pointer;
   }
 
-  .small_button,
-  .del_button {
-    @apply bg-slate-100;
-  }
-
-  .small_button {
-    @apply text-slate-600;
-  }
-
   .del_button,
   .reset_button {
-    @apply text-2xl bg-slate-500;
-  }
-
-  .equal_button {
-    @apply bg-red-500;
+    @apply text-2xl;
   }
 }

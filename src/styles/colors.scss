@@ -1,18 +1,63 @@
 $page_bg_color_1: hsl(222, 26%, 31%);
 $screen_bg_color_1: hsl(224, 36%, 15%);
+$keypad_bg_color_1: hsl(223, 31%, 20%);
 $main_text_color_1: #fff;
-// small button
-$small_button_text_color_1: hsl(225, 21%, 49%);
-$small_button_bg_color_1: #fff;
-$small_button_shadow_color_1: #aaf;
+$small_button_text_color_1: hsl(222, 26%, 31%);
+$small_button_bg_color_1: hsl(30, 25%, 89%);
+$small_button_shadow_color_1: hsl(28, 16%, 65%);
+$del_button_bg_color_1: hsl(225, 21%, 49%);
+$del_button_shadow_color_1: hsl(224, 28%, 35%);
+$equal_button_bg_color_1: hsl(6, 63%, 50%);
+$equal_button_shadow_color_1: hsl(6, 70%, 34%);
 
-$del_text_color_1: #8000ff;
-$del_button_bg_color_1: #000;
-$del_button_shadow_color_1: #000;
-// equal button
-$equal_text_color_1: #8000ff;
+$page_bg_color_2: hsl(0, 0%, 90%);
+$screen_bg_color_2: hsl(0, 0%, 93%);
+$keypad_bg_color_2: hsl(0, 5%, 81%);
+$main_text_color_2: hsl(60, 10%, 19%);
+$small_button_text_color_2: hsl(60, 10%, 19%);
+$small_button_bg_color_2: hsl(45, 7%, 89%);
+$small_button_shadow_color_2: hsl(35, 11%, 61%);
+$del_text_color_2: #fff;
+$del_button_bg_color_2: hsl(185, 42%, 37%);
+$del_button_shadow_color_2: hsl(185, 58%, 25%);
+$equal_button_bg_color_2: hsl(25, 98%, 40%);
+$equal_button_shadow_color_2: hsl(25, 99%, 27%);
 
-$small_button_bg_color_2: #00aaff;
-$small_button_shadow_color_2: #aaf;
-$reset_button_bg_color_2: #000;
-$reset_button_shadow_color_2: #000;
+$page_bg_color_3: #f2ebbf;
+$screen_bg_color_3: #d9d3ab;
+$keypad_bg_color_3: #d9d3ab;
+$main_text_color_3: #333228;
+$small_button_text_color_3: #fff;
+$small_button_bg_color_3: #73705b;
+$small_button_shadow_color_3: #595747;
+$del_text_color_3: #fff;
+$del_button_bg_color_3: #f3b562;
+$del_button_shadow_color_3: #d9a057;
+$equal_button_bg_color_3: #f06060;
+$equal_button_shadow_color_3: #d65656;
+
+// $page_bg_color_3: hsl(268, 75%, 9%);
+// $screen_bg_color_3: hsl(268, 71%, 12%);
+// $keypad_bg_color_3: hsl(268, 71%, 12%);
+// $main_text_color_3: hsl(52, 100%, 62%);
+// $small_button_text_color_3: hsl(52, 100%, 62%);
+// $small_button_bg_color_3: hsl(268, 47%, 21%);
+// $small_button_shadow_color_3: hsl(290, 70%, 36%);
+// $del_text_color_3: #fff;
+// $del_button_bg_color_3: hsl(281, 89%, 26%);
+// $del_button_shadow_color_3: hsl(285, 91%, 52%);
+// $equal_button_bg_color_3: hsl(176, 100%, 44%);
+// $equal_button_shadow_color_3: hsl(177, 92%, 70%);
+
+$page_bg_color_4: #a3ccab;
+$screen_bg_color_4: #34675c;
+$keypad_bg_color_4: #34675c;
+$main_text_color_4: #fff;
+$small_button_text_color_4: #053d38;
+$small_button_bg_color_4: #f2efe6;
+$small_button_shadow_color_4: #ccc099;
+$del_text_color_4: #fff;
+$del_button_bg_color_4: #13bf73;
+$del_button_shadow_color_4: #11a663;
+$equal_button_bg_color_4: #f26800;
+$equal_button_shadow_color_4: #d95e00;

@@ -38,10 +38,10 @@ function App() {
   const pressDot = () => {
     if (displayedIsResult) {
       setDisplayedIsResult(false)
-      setDisplayed("0.")
+      setDisplayed("0,")
     } else {
       let lastChar = displayed[displayed.length - 1]
-      if (lastChar !== ".") setDisplayed(`${displayed}.`)
+      if (lastChar !== ",") setDisplayed(`${displayed},`)
     }
   }
 
@@ -69,7 +69,6 @@ function App() {
   }
 
   const flashBorder = () => {
-    console.log("flash border")
     const elem = document.getElementById("calc-display")
     if (elem) {
       elem.classList.add("error_border")
@@ -83,12 +82,15 @@ function App() {
     try {
       if (displayed && displayed.replaceAll) {
         const replaced = displayed.replaceAll("x", "*")
-        const result = evaluate(replaced)
+        const replaced2 = replaced.replaceAll(",", ".")
+        const result = evaluate(replaced2)
         const rounded = round(result, 5)
+        const roundedString = rounded.toString()
+        const replaced3 = roundedString.replaceAll(".", ",")
 
-        if (displayed !== `${rounded}`) {
+        if (displayed !== `${replaced3}`) {
           setDisplayedIsResult(true)
-          setDisplayed(rounded ? `${rounded}` : "0")
+          setDisplayed(replaced3 ? `${replaced3}` : "0")
         }
       }
     } catch (err) {
@@ -97,7 +99,11 @@ function App() {
   }
 
   return (
-    <div className="w-full main_bg theme_1 select-none min-h-screen flex items-center justify-center base_text_color text-[2rem] p-5">
+    <div
+      className={`w-full main_bg select-none min-h-screen flex items-center justify-center base_text_color text-[2rem] p-5 theme_${
+        colorScheme + 1
+      }`}
+    >
       <div className="flex flex-col w-full max-w-md min-h-[30rem] py-7">
         <div className="flex justify-between items-end">
           <div className="text-2xl flex-grow">calc</div>
@@ -111,11 +117,11 @@ function App() {
             <div className="flex items-center">
               <h2 className=" mr-6 tracking-widest text-[11px]">THEME</h2>
               <div
-                className="screen_bg h-6 w-[5.25rem] p-1 rounded-full cursor-pointer"
+                className="keypad_bg h-6 w-[5.25rem] p-1 rounded-full cursor-pointer"
                 onClick={toggleColorScheme}
               >
                 <div
-                  className={`w-4 h-4 rounded-full bg-red-500 transition-all ${
+                  className={`w-4 h-4 theme_dot rounded-full transition-all ${
                     colorScheme === 1
                       ? "ml-5"
                       : colorScheme === 2
@@ -139,7 +145,7 @@ function App() {
           </div>
         </div>
 
-        <div className="bg-slate-800 box_radius mt-5 p-7">
+        <div className="keypad_bg box_radius mt-5 p-7">
           <div className="grid grid-cols-4 gap-5">
             <button
               type="button"

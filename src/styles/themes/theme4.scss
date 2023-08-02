@@ -1,0 +1,60 @@
+@import "../colors";
+
+.theme_4 {
+  color: $main_text_color_4;
+  background-color: $page_bg_color_4;
+}
+
+.theme_4 {
+  .screen_bg {
+    background-color: $screen_bg_color_4;
+  }
+
+  .theme_dot {
+    background-color: $equal_button_bg_color_4;
+  }
+
+  .keypad_bg {
+    background-color: $keypad_bg_color_4;
+  }
+
+  .keypad_bg:hover .theme_dot {
+    background-color: lighten($equal_button_bg_color_4, 10%);
+  }
+
+  .small_button {
+    color: $small_button_text_color_4;
+    background-color: $small_button_bg_color_4;
+    box-shadow: 0 4px 0 0 $small_button_shadow_color_4;
+  }
+
+  .small_button:hover {
+    background-color: lighten($small_button_bg_color_4, 10%);
+  }
+
+  .del_button,
+  .reset_button {
+    color: $del_text_color_4;
+    background-color: $del_button_bg_color_4;
+    box-shadow: 0 4px 0 0 $del_button_shadow_color_4;
+  }
+
+  .del_button:hover,
+  .reset_button:hover {
+    background-color: lighten($del_button_bg_color_4, 5%);
+  }
+
+  .equal_button {
+    color: $del_text_color_4;
+    background-color: $equal_button_bg_color_4;
+    box-shadow: 0 4px 0 0 $equal_button_shadow_color_4;
+  }
+
+  .equal_button:hover {
+    background-color: lighten($equal_button_bg_color_4, 5%);
+  }
+
+  .error_border {
+    border-color: $equal_button_bg_color_4 !important;
+  }
+}
